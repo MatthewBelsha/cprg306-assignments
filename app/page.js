@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="">
+      <main className="">
         <h1>CPRG 306: Web Development 2 - Assignments</h1>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <div className="flex gap-4 flex-col sm:flex-row">
           <li>
             <a href="./week-2" target="_blank" rel="noopener noreferrer">
-              Week 2
+              Week 2 Assignment
             </a>
           </li>
         </div>
