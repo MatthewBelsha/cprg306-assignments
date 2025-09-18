@@ -4,7 +4,11 @@ export default function StudentInfo() {
     <main>
       <title>Student Info</title>
       <h2>Matthew Belsham</h2>
-      <Link href="https://github.com/MatthewBelsha?tab=repositories">
+      <Link
+        href="https://github.com/MatthewBelsha?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         GitHub
       </Link>
     </main>
