@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Home() {
   return (
     <main>
@@ -5,14 +6,14 @@ export default function Home() {
       <div className="flex gap-4 flex-col sm:flex-row">
         <ul>
           <li>
-            <a href="./week-2" target="_blank" rel="noopener noreferrer">
+            <Link href="./week-2" target="_blank" rel="noopener noreferrer">
               Week 2 Assignment
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./week-3" target="_blank" rel="noopener noreferrer">
+            <Link href="./week-3" target="_blank" rel="noopener noreferrer">
               Week 3 Assignment
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
