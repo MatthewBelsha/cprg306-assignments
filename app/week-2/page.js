@@ -1,4 +1,5 @@
 import Link from "next/link";
+// this import is necessary for the <Link> component to work
 
 export default function Page() {
   return (

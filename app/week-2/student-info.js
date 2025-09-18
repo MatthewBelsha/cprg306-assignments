@@ -1,5 +1,3 @@
-const { default: Link } = require("next/link");
-
 <main>
   <title>Student Info</title>
   <h2>Matthew Belsham</h2>
