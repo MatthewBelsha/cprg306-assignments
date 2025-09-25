@@ -6,14 +6,13 @@ export default function Home() {
       <div className="flex gap-4 flex-col sm:flex-row">
         <ul>
           <li>
-            <Link href="./week-2" target="_blank" rel="noopener noreferrer">
-              Week 2 Assignment
-            </Link>
+            <Link href="./week-2">Week 2 Assignment</Link>
           </li>
           <li>
-            <Link href="./week-3" target="_blank" rel="noopener noreferrer">
-              Week 3 Assignment
-            </Link>
+            <Link href="./week-3">Week 3 Assignment</Link>
+          </li>
+          <li>
+            <Link href="./week-4">Week 4 Assignment</Link>
           </li>
         </ul>
       </div>
