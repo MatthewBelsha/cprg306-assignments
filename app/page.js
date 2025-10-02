@@ -14,11 +14,6 @@ export default function Home() {
           <li>
             <Link href="./week-4">Week 4 Assignment</Link>
           </li>
-          <li>
-            <Link href="./week-4" target="_blank" rel="noopener noreferrer">
-              Week 4 Assignment
-            </Link>
-          </li>
         </ul>
       </div>
     </main>
