@@ -86,6 +86,7 @@ export default function NewItem() {
         <select
           className="border-2 rounded-lg px-4 py-2"
           // map function to iterate through the options in for the dropdown menu
+          value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
           {dropdownOptions.map((option) => (
