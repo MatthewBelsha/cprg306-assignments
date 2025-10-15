@@ -33,7 +33,7 @@ export default function ItemList() {
   if (sortBy === "category") {
     categoryButtonClass += "bg-red-500 text-white border-2 border-white";
   } else {
-    categoryButtonClass += "bg-red-90 0";
+    categoryButtonClass += "bg-red-900";
   }
 
   return (
@@ -63,3 +63,4 @@ export default function ItemList() {
     </main>
   );
 }
+
