@@ -24,17 +24,19 @@ export default function ItemList() {
   // Use normal if statements for button classes
   let nameButtonClass = "px-3 py-1 rounded-lg ";
   if (sortBy === "name") {
-    nameButtonClass += "bg-red-500 text-white border-2 border-white";
+    nameButtonClass += "bg-red-500 text-white border-3 border-red-700";
   } else {
-    nameButtonClass += "bg-gray-300";
+    nameButtonClass += "bg-gray-300 border-3 border-grey-400";
   }
 
   let categoryButtonClass = "px-3 py-1 rounded-lg ";
   if (sortBy === "category") {
-    categoryButtonClass += "bg-red-500 text-white border-2 border-white";
+    categoryButtonClass += "bg-red-500 text-white border-3 border-red-700";
   } else {
-    categoryButtonClass += "bg-gray-300";
+    categoryButtonClass += "bg-gray-300 border-3 border-grey-400";
   }
+
+  
 
   return (
     <main className="flex flex-col items-center">
