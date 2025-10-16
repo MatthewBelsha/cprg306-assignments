@@ -26,14 +26,14 @@ export default function ItemList() {
   if (sortBy === "name") {
     nameButtonClass += "bg-red-500 text-white border-2 border-white";
   } else {
-    nameButtonClass += "bg-red-900";
+    nameButtonClass += "bg-gray-300";
   }
 
   let categoryButtonClass = "px-3 py-1 rounded-lg ";
   if (sortBy === "category") {
     categoryButtonClass += "bg-red-500 text-white border-2 border-white";
   } else {
-    categoryButtonClass += "bg-red-900";
+    categoryButtonClass += "bg-gray-300";
   }
 
   return (
