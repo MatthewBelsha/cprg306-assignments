@@ -14,19 +14,20 @@ export default function ItemList({ items }) {
   }
 
   // button styles
-  const activeClass = "bg-blue-700 text-white border-2 border-white";
-  const inactiveClass = "bg-blue-900 text-white";
+  const activeClass = "bg-blue-700 text-white border-2 border-blue-900";
+  const inactiveClass = "bg-gray-300 text-black";
 
   return (
     <main className="flex flex-col items-center">
       <div className="flex gap-2 mb-4">
+        Sort by:
         <button
           onClick={() => setSortBy("name")}
           className={`px-3 py-1 rounded-lg ${
             sortBy === "name" ? activeClass : inactiveClass
           }`}
         >
-          Sort by Name
+          Name
         </button>
         <button
           onClick={() => setSortBy("category")}
@@ -34,7 +35,7 @@ export default function ItemList({ items }) {
             sortBy === "category" ? activeClass : inactiveClass
           }`}
         >
-          Sort by Category
+          Category
         </button>
       </div>
 

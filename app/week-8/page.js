@@ -3,6 +3,7 @@ import { useState } from "react";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
+import MealIdeas from "./meal-ideas";
 
 export default function Page() {
   const [items, setItems] = useState(itemsData);
@@ -24,8 +25,11 @@ export default function Page() {
       </div>
 
       {/*current items*/}
-      <div className="space-y-4 p-4 text-center rounded-lg">
+      <div className="space-y-4 p-4 rounded-lg">
         <ItemList items={items} />
+      </div>
+      <div className="space-y-4 p-4 rounded-lg">
+        <MealIdeas />
       </div>
     </main>
   );

@@ -52,7 +52,9 @@ export default function NewItem({ onAddItem }) {
           type="button"
           onClick={() => quantity > 1 && setQuantity(quantity - 1)}
           className="bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg"
+          //when quantity is 1 grey out the button
           disabled={quantity === 1}
+          style={{ opacity: quantity === 1 ? 0.5 : 1 }}
         >
           -
         </button>
@@ -63,7 +65,9 @@ export default function NewItem({ onAddItem }) {
           type="button"
           onClick={() => quantity < 20 && setQuantity(quantity + 1)}
           className="bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg"
+          //when quantity is 1 grey out the button
           disabled={quantity === 20}
+          style={{ opacity: quantity === 20 ? 0.5 : 1 }}
         >
           +
         </button>
