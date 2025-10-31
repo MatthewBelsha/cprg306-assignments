@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 //API fetching meal ideas
 async function fetchMealIdeas(ingredient) {
@@ -34,7 +35,7 @@ export default function MealIdeas({ ingredient }) {
 
   return (
     <div className="bg-orange-100 p-5 rounded-lg w-96">
-      <h2 className="text-xl font-bold mb-3">Meal ideas for "{ingredient && `${ingredient}`}"</h2>
+      <h2 className="text-xl font-bold mb-3"> Meal ideas for {ingredient && `${ingredient}`}</h2>
       <ul>
         {meals.map((meal) => (
           <li key={meal.idMeal} className="mb-3 flex items-center">
