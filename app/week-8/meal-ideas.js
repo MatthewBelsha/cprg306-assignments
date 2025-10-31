@@ -25,7 +25,11 @@ export default function MealIdeas({ ingredient }) {
 
   // Fetch meal ideas when ingredient changes
   useEffect(() => {
-    loadMealIdeas();
+  async function loadMealIdeas() {
+    const mealData = await fetchMealIdeas(ingredient);
+    setMeals(mealData);
+  }
+  loadMealIdeas();
   }, [ingredient]);
 
   return (
