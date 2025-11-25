@@ -25,7 +25,7 @@ export default function Page() {
     <main className="flex flex-col items-center justify-center h-screen bg-[#cae8ff] text-blue-800">
       {!user ? (
         <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold">A9: Welcome to the Shopping List App</h1>
+        <h1 className="text-3xl font-bold">A10: Welcome to the Shopping List App</h1>
           <button
             onClick={handleLogin}
             className="bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-800"
@@ -36,7 +36,7 @@ export default function Page() {
       ) : (
         <div className="text-center space-y-4">
           <p> Welcome, <b>{user.displayName}</b> ({user.email})</p>
-          <Link href="/week-9/shopping-list" className="text-blue-800 font-semibold underline">
+          <Link href="/week-10/shopping-list" className="text-blue-800 font-semibold underline">
             Go to Shopping List
           </Link>
           <br />
