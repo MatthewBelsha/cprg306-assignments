@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import ItemList from "./item-list";
 import NewItem from "./new-item";
-import itemsData from "./items.json";
+import { getItems, addItem } from "../_services/shopping-list-service";
 import MealIdeas from "./meal-ideas";
 
 //Clean ingredient names (emoji, commas, weight)
@@ -16,7 +16,7 @@ function cleanIngredient(str) {
 }
 
 export default function Page() {
-  const [items, setItems] = useState(itemsData);
+  const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
   //user auth
   const { user } = useUserAuth();
@@ -25,8 +25,21 @@ export default function Page() {
 
   //if not logged in, redirect to landing page
   useEffect(() => {
-    if (!user) router.push("/week-9");
+    if (!user) router.push("/week-10");
   }, [user, router]);
+
+
+  //load shopping list
+  const loadItems = async () => {
+    if (!user) return;
+      const list = await getItems(user.uid);
+      setItems(list);
+    }
+
+  //load items once user logs in
+  useEffect(() => {
+    if (user) loadItems();
+  }, [user]);
 
   if (!user) {
     return (
@@ -36,11 +49,11 @@ export default function Page() {
     );
   }
 
-  // item handler
-  const handleAddItem = (newItem) => {
-    //spread operator to add new item to existing items
-    //reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-    setItems((prevItems) => [...prevItems, newItem]);
+  // add item to Firestore and update state
+  const handleAddItem = async (item) => {
+    const id = await addItem(user.uid, item);
+    const newItem = { ...item, id };
+    setItems((prev) => [...prev, newItem]);
   };
 
   const handleItemSelect = (item) => {
